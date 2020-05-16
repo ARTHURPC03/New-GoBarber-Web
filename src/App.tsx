@@ -1,10 +1,11 @@
 import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import SignIn from './pages/SignIn'
-// import SignUp from './pages/SignUp'
 import GlobalStyle from './styles/global'
 
 import AppProvider from './hooks'
+
+import Routes from './routes'
 
 if (process.env.NODE_ENV !== 'production') {
   const { whyDidYouUpdate } = require('why-did-you-update')
@@ -12,12 +13,12 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const App: React.FC = () => (
-  <>
+  <Router>
     <AppProvider>
-      <SignIn />
+      <Routes />
     </AppProvider>
 
     <GlobalStyle />
-  </>
+  </Router>
 )
 export default App
