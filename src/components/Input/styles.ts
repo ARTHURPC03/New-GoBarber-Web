@@ -8,12 +8,13 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  background: #232129;
+  background: ${props => props.theme.colors.li};
   border-radius: 10px;
-  border: 2px solid #232129;
+  border: 2px solid ${props => props.theme.colors.li};
   padding: 16px;
   width: 100%;
   color: #666360;
+  transition: all 1s;
 
   display: flex;
   align-items: center;
@@ -47,10 +48,10 @@ export const Container = styled.div<ContainerProps>`
     flex: 1;
     background: transparent;
     border: 0;
-    color: #f4ede8;
+    color: ${props => props.theme.colors.inputColor};
 
     &::placeholder {
-      color: #666360;
+      color: ${props => props.theme.colors.inputPlaceholder};
     }
 
     & + input {

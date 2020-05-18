@@ -4,7 +4,9 @@ import { shade } from 'polished'
 import signUpBackgroundImg from '../../assets/sign-up-background.png'
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 90vh;
+
+  transition: all 1s;
 
   display: flex;
   align-items: stretch;

@@ -4,7 +4,9 @@ import { shade } from 'polished'
 import signInBackgroundImg from '../../assets/sign-in-background.png'
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 90vh;
+
+  transition: all 1s;
 
   display: flex;
   align-items: stretch;
@@ -48,7 +50,7 @@ export const AnimationContainer = styled.div`
     }
 
     a {
-      color: #f4ede8;
+      color: ${props => props.theme.colors.text};
       display: block;
       margin-top: 24px;
       text-decoration: none;
