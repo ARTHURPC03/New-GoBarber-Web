@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { ThemeProvider } from 'styled-components'
+import React from 'react'
+import { ThemeProvider, DefaultTheme } from 'styled-components'
 import { BrowserRouter as Router } from 'react-router-dom'
+import usePersistedState from './utils/usePersistedState'
 
 import Header from './components/Header'
 import light from './styles/themes/light'
@@ -18,7 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const App: React.FC = () => {
-  const [theme, setTheme] = useState(dark)
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
