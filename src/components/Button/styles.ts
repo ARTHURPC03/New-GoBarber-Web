@@ -13,7 +13,20 @@ export const Container = styled.button`
   margin-top: 16px;
   transition: background-color 0.2s;
 
+  -webkit-box-pack: center;
+  justify-content: center;
+  transition: border 0.2s ease 0s, transform 0.2s ease 0s;
+  border-width: 3px;
+  border-style: solid;
+  border-color: ${props => props.theme.colors.background};
+  border-image: initial;
+
   &:hover {
-    background: ${shade(0.2, '#ff9000')};
+    transform: translateY(-7px);
+    border-color: ${props => props.theme.colors.text};
   }
+
+  /* &:hover {
+    background: ${shade(0.2, '#ff9000')};
+  } */
 `
