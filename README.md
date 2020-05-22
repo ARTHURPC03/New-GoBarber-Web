@@ -41,7 +41,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-GoBarber é um aplicativo de agendamento de barbeiro que permite aos usuários agendar uma consulta com seu barbeiro favorito e mostra ao barbeiro sua agenda para o dia.
+GoBarber é um aplicativo que permite aos usuários agendar uma consulta com seu barbeiro favorito e mostra ao barbeiro sua agenda para o dia.
 
 ## ⚙ Configuração
 
