@@ -1,5 +1,5 @@
 <h1 align="center">
-   New Go Barber
+   New GoBarber
 </h1>
 
 <br>
