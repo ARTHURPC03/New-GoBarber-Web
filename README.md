@@ -1,5 +1,5 @@
 <h1 align="center">
-   New Go Barber
+   New GoBarber
 </h1>
 
 <br>
@@ -41,7 +41,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-GoBarber Um aplicativo de agendamento de barbeiro que permite aos usuários agendar uma consulta com seu barbeiro favorito e mostra ao barbeiro sua agenda para o dia.
+GoBarber é um aplicativo que permite aos usuários agendar uma consulta com seu barbeiro favorito e mostra ao barbeiro sua agenda para o dia.
 
 ## ⚙ Configuração
 
