@@ -6,14 +6,16 @@ import { Container } from './styles'
 
 interface Props {
   toggleTheme(): void
+  children?: any
 }
 
-const Header: React.FC<Props> = ({ toggleTheme }) => {
+const Header: React.FC<Props> = ({ toggleTheme, children }) => {
   const { colors, title, logo } = useContext(ThemeContext)
 
   return (
     <Container>
       <img src={logo} alt="GoBarber" width={125} />
+      {children}
       <Switch
         onChange={toggleTheme}
         checked={title === 'dark'}
