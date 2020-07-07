@@ -13,10 +13,10 @@ import AppProvider from './hooks'
 
 import Routes from './routes'
 
-if (process.env.NODE_ENV !== 'production') {
-  const { whyDidYouUpdate } = require('why-did-you-update')
-  whyDidYouUpdate(React)
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   const { whyDidYouUpdate } = require('why-did-you-update')
+//   whyDidYouUpdate(React)
+// }
 
 const App: React.FC = () => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
