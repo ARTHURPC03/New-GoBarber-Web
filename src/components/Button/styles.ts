@@ -25,8 +25,4 @@ export const Container = styled.button`
     transform: translateY(-7px);
     border-color: ${props => props.theme.colors.text};
   }
-
-  /* &:hover {
-    background: ${shade(0.2, '#ff9000')};
-  } */
 `

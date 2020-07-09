@@ -6,11 +6,10 @@ import { Container } from './styles'
 
 interface Props {
   toggleTheme(): void
-  children?: any
 }
 
-const ThemeSwitcher: React.FC<Props> = ({ toggleTheme /* , children */ }) => {
-  const { colors, title /* , logo */ } = useContext(ThemeContext)
+const ThemeSwitcher: React.FC<Props> = ({ toggleTheme }) => {
+  const { colors, title } = useContext(ThemeContext)
 
   return (
     <Container>
