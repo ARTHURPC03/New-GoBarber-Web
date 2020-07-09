@@ -5,7 +5,7 @@ export const Container = styled.div``
 
 export const Header = styled.header`
   padding: 32px 0;
-  background: #28262e;
+  background: ${props => props.theme.colors.primary};
 `
 
 export const HeaderContent = styled.div`
@@ -49,7 +49,7 @@ export const Profile = styled.div`
     line-height: 24px;
 
     span {
-      color: #f4ede8;
+      color: ${props => props.theme.colors.inputColor};
     }
 
     a {
@@ -102,13 +102,13 @@ export const NextAppointment = styled.div`
   margin-top: 64px;
 
   > strong {
-    color: #999591;
+    color: ${props => props.theme.colors.strongSchedule};
     font-size: 20px;
     font-weight: 400;
   }
 
   div {
-    background: #3e3b47;
+    background: ${props => props.theme.colors.appointmentBackground};
     display: flex;
     align-items: center;
     padding: 16px 24px;
@@ -134,14 +134,14 @@ export const NextAppointment = styled.div`
 
     strong {
       margin-left: 24px;
-      color: #fff;
+      color: ${props => props.theme.colors.text};
     }
 
     span {
       margin-left: auto;
       display: flex;
       align-items: center;
-      color: #999591;
+      color: ${props => props.theme.colors.text};
 
       svg {
         color: #ff9000;
@@ -155,7 +155,7 @@ export const Section = styled.section`
   margin-top: 48px;
 
   > strong {
-    color: #999591;
+    color: ${props => props.theme.colors.strongSchedule};
     font-size: 20px;
     line-height: 26px;
     border-bottom: 1px solid #3e3b47;
@@ -181,7 +181,7 @@ export const Appointment = styled.div`
     margin-left: auto;
     display: flex;
     align-items: center;
-    color: #f4ede8;
+    color: ${props => props.theme.colors.text};
     width: 70px;
 
     svg {
@@ -192,7 +192,7 @@ export const Appointment = styled.div`
 
   div {
     flex: 1;
-    background: #3e3b47;
+    background: ${props => props.theme.colors.appointmentBackground};
     display: flex;
     align-items: center;
     padding: 16px 24px;
@@ -207,7 +207,7 @@ export const Appointment = styled.div`
 
     strong {
       margin-left: 24px;
-      color: #fff;
+      color: ${props => props.theme.colors.text};
       font-size: 20px;
     }
   }
@@ -217,7 +217,7 @@ export const Calendar = styled.aside`
   width: 380px;
 
   .DayPicker {
-    background: #28262e;
+    background: ${props => props.theme.colors.dayPicker};
     border-radius: 10px;
   }
   .DayPicker-wrapper {
@@ -237,13 +237,14 @@ export const Calendar = styled.aside`
     height: 40px;
   }
   .DayPicker-Day--available:not(.DayPicker-Day--outside) {
-    background: #3e3b47;
+    background: ${props => props.theme.colors.dayAvailableBackground};
     border-radius: 10px;
-    color: #fff;
+    color: ${props => props.theme.colors.text};
   }
+
   .DayPicker:not(.DayPicker--interactionDisabled)
     .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
-    background: ${shade(0.2, '#3e3b47')};
+    background: ${props => props.theme.colors.dayAvailableBackgroundHover};
   }
   .DayPicker-Day--today {
     font-weight: normal;

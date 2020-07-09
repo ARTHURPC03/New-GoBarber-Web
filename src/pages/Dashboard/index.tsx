@@ -1,9 +1,16 @@
-import React, { useState, useCallback, useEffect, useMemo } from 'react'
+import React, {
+  useState,
+  useCallback,
+  useEffect,
+  useMemo,
+  useContext,
+} from 'react'
 import { isToday, format, parseISO, isAfter } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import DayPicker, { DayModifiers } from 'react-day-picker'
 import 'react-day-picker/lib/style.css'
 
+import { ThemeContext } from 'styled-components'
 import { FiPower, FiClock } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import {
@@ -19,7 +26,6 @@ import {
   Calendar,
 } from './styles'
 
-import logoImg from '../../assets/logo.svg'
 import { useAuth } from '../../hooks/auth'
 import api from '../../services/api'
 
@@ -39,6 +45,8 @@ interface Appointment {
 }
 
 const Dashboard: React.FC = () => {
+  const { logo } = useContext(ThemeContext)
+
   const [selectedDate, setSelectedDate] = useState(new Date())
   const [currentMonth, setCurrentMonth] = useState(new Date())
 
@@ -136,7 +144,7 @@ const Dashboard: React.FC = () => {
     <Container>
       <Header>
         <HeaderContent>
-          <img src={logoImg} alt="GoBarber" />
+          <img src={logo} alt="GoBarber" />
           <Profile>
             <img src={user.avatar_url} alt={user.name} />
 

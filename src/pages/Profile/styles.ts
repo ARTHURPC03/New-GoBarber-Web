@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   > header {
     height: 144px;
-    background: #28262e;
+    background: ${props => props.theme.colors.primary};
 
     display: flex;
     align-items: center;

@@ -14,6 +14,11 @@ declare module 'styled-components' {
       text: string
       inputColor: string
       inputPlaceholder: string
+      strongSchedule: string
+      appointmentBackground: string
+      dayPicker: string
+      dayAvailableBackground: string
+      dayAvailableBackgroundHover: string
     }
   }
 }

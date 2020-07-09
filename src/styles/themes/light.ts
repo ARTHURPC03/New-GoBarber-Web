@@ -13,5 +13,10 @@ export default {
     text: '#0d0d0d',
     inputColor: '#333',
     inputPlaceholder: '#000000',
+    strongSchedule: '#020202',
+    appointmentBackground: '#ffff',
+    dayPicker: '#fff',
+    dayAvailableBackground: '#E5E5E5',
+    dayAvailableBackgroundHover: '#efefef',
   },
 }
