@@ -3,7 +3,7 @@ import { ThemeProvider, DefaultTheme } from 'styled-components'
 import { BrowserRouter as Router } from 'react-router-dom'
 import usePersistedState from './utils/usePersistedState'
 
-import Header from './components/Header'
+import ThemeSwitcher from './components/ThemeSwitcher'
 import light from './styles/themes/light'
 import dark from './styles/themes/dark'
 
@@ -13,15 +13,10 @@ import AppProvider from './hooks'
 
 import Routes from './routes'
 
-// if (process.env.NODE_ENV !== 'production') {
-//   const { whyDidYouUpdate } = require('why-did-you-update')
-//   whyDidYouUpdate(React)
-// }
-
 const App: React.FC = () => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
 
-  const toggleTheme = () => {
+  const toggleTheme = (): void => {
     setTheme(theme.title === 'light' ? dark : light)
   }
 
@@ -29,7 +24,7 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <Router>
         <AppProvider>
-          <Header toggleTheme={toggleTheme} />
+          <ThemeSwitcher toggleTheme={toggleTheme} />
           <Routes />
         </AppProvider>
         <GlobalStyle />

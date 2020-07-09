@@ -9,13 +9,11 @@ interface Props {
   children?: any
 }
 
-const Header: React.FC<Props> = ({ toggleTheme, children }) => {
-  const { colors, title, logo } = useContext(ThemeContext)
+const ThemeSwitcher: React.FC<Props> = ({ toggleTheme /* , children */ }) => {
+  const { colors, title /* , logo */ } = useContext(ThemeContext)
 
   return (
     <Container>
-      <img src={logo} alt="GoBarber" width={125} />
-      {children}
       <Switch
         onChange={toggleTheme}
         checked={title === 'dark'}
@@ -33,4 +31,4 @@ const Header: React.FC<Props> = ({ toggleTheme, children }) => {
   )
 }
 
-export default Header
+export default ThemeSwitcher
