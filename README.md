@@ -6,11 +6,10 @@
 
 ## :camera: Demonstração
 
-![gif](github/NewGoBarber.gif)
-![png1](github/LogonD.png)
-![png1](github/LogonL.png)
-![png3](github/RegisterD.png)
-![png3](github/RegisterL.png)
+<div align="center" >
+  <img src="./github/SignGoBarber.gif" alt="demo-web" height="425">
+  <img src="./github/WebGoBarber.gif" alt="demo-web" height="425">
+</div>
 
 ## :rocket: Tecnologias
 
@@ -26,9 +25,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ✔️Styled-components
 
+✔️Unform
+
 ✔️React Spring
 
 ✔️Polished
+
+✔️React-day-picker
+
+✔️date-fns
 
 ✔️Docker
 
