@@ -9,9 +9,9 @@ jest.mock('react-router-dom', () => {
   }
 })
 
-jest.mock('react', () => {
+jest.mock('styled-components', () => {
   return {
-    useContext: jest.fn(),
+    ThemeContext: jest.fn(),
   }
 })
 
